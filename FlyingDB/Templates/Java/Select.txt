@@ -1,0 +1,31 @@
+
+	public List<[POJO]> get[TABLE_NAME_CAPITAL]List(String fieldName, String fieldValue, String orderBy) 	{
+		SQLiteDatabase database = databaseHelper.getWritableDatabase();
+		Cursor result = null;
+		String query = "[SELECT_QUERY] FROM [TABLE_NAME]";
+		if(fieldName!=null && fieldName.length()>0) {
+			query += " WHERE " + fieldName + " = ?";
+		}
+
+		if(orderBy!=null && orderBy.length()>0) {
+			query += " ORDER BY " + orderBy;
+		}
+
+		if(fieldName!=null && fieldName.length()>0) {
+			result = database.rawQuery(query, new String[] { fieldValue });
+		} else {
+			result = database.rawQuery(query, null);
+		}
+		
+		List<[POJO]> returnList = new ArrayList<[POJO]>();
+		int rowCount = result.getCount();
+		if (rowCount > 0) {
+			result.moveToFirst();
+			while (!result.isAfterLast()) {
+				returnList.add([NEW_POJO]);
+				result.moveToNext();
+			}
+		}
+		result.close();
+		return returnList;
+	}

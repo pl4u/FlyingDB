@@ -1,0 +1,8 @@
+
+	public long add[TABLE_NAME_CAPITAL]([TABLE_FIELDS]) {
+		SQLiteDatabase database = databaseHelper.getWritableDatabase();
+		ContentValues values = new ContentValues();
+		[VALUES]
+		long result = database.insert("[TABLE_NAME]", null, values);
+		return result;
+	}
