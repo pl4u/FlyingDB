@@ -1,6 +1,5 @@
 
 	public long update[TABLE_NAME_CAPITAL]([TABLE_FIELDS], String fieldName, String fieldValue) {
-		SQLiteDatabase database = databaseHelper.getWritableDatabase();
 		ContentValues values = new ContentValues();
 		[VALUES]
 		long result = database.update("[TABLE_NAME]", values, fieldName + " = ?", 
