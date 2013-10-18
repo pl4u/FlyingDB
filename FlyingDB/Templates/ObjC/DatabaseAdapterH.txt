@@ -12,9 +12,6 @@
 
 + (int) updateDeleteToDatabase: (NSString *) queryString;
 + (NSString *) insertToDatabase: (NSString *) queryString;
-
-+ (NSString *) sanitizeString: (NSString *) unsanitizedString;
-+ (void) deleteAllRecords;
 + (BOOL) databaseExists;
 + (void) copyOverDatabase;
 + (NSString *) databasePath;

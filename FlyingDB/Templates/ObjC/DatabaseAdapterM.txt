@@ -1,29 +1,30 @@
 
 #import <sqlite3.h>
+#import "DatabaseAdapter.h"
 [IMPORTS]
 
 @implementation DatabaseAdapter
 
 + (NSString *) databasePath
 {
-    NSString * documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     
-    return [documentsPath stringByAppendingPathComponent:@"VolunteerDatabase.sqlite"];
+    return [documentsPath stringByAppendingPathComponent:@"[DATABASE_FILE_NAME]"];
 }
 
 + (BOOL) databaseExists
 {
-    NSString * documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *databaseFilePath = [documentsPath stringByAppendingPathComponent:@"VolunteerDatabase.sqlite"];
+    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *databaseFilePath = [documentsPath stringByAppendingPathComponent:@"[DATABASE_FILE_NAME]"];
     return [[NSFileManager defaultManager] fileExistsAtPath:databaseFilePath];
 }
 
 + (void) copyOverDatabase
 {
-    NSString * documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     
-    NSString *databaseDestinationPath = [documentsPath stringByAppendingPathComponent:@"VolunteerDatabase.sqlite"];
-    NSString *databaseSourcePath = [[NSBundle mainBundle] pathForResource:@"VolunteerDatabase" ofType:@"sqlite"];
+    NSString *databaseDestinationPath = [documentsPath stringByAppendingPathComponent:@"[DATABASE_FILE_NAME]"];
+    NSString *databaseSourcePath = [[NSBundle mainBundle] pathForResource:@"[DATABASE_FILE_NAME_MINUS_EXTENSION]" ofType:@"sqlite"];
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSError *error = nil;
@@ -47,18 +48,13 @@
     
 }
 
-+ (NSString *) sanitizeString:(NSString *)unsanitizedString
-{
-    return [unsanitizedString stringByReplacingOccurrencesOfString:@"'" withString:@"''"];
-}
-
 // Utility Methods
 + (NSString *) insertToDatabase: (NSString *) queryString
 {
     NSString *filePath = [self databasePath];
     sqlite3 *database;
-    const char* databasePathUTF8 = [filePath UTF8String];
-    char* errorMessage;
+    const char *databasePathUTF8 = [filePath UTF8String];
+    char *errorMessage;
     int result=0; 
     NSString *primaryKeyInserted=nil;
     if(sqlite3_open(databasePathUTF8, &database) == SQLITE_OK)
@@ -71,7 +67,7 @@
         }
         else
         {
-            primaryKeyInserted = [NSString stringWithFormat:@"%d", sqlite3_last_insert_rowid(database)];
+            primaryKeyInserted = [NSString stringWithFormat:@"%lld", sqlite3_last_insert_rowid(database)];
         }
     }
     sqlite3_close(database);
@@ -82,8 +78,8 @@
 {
     NSString *filePath = [self databasePath];
     sqlite3 *database;
-    const char* databasePathUTF8 = [filePath UTF8String];
-    char* errorMessage;
+    const char *databasePathUTF8 = [filePath UTF8String];
+    char *errorMessage;
     int result=0; 
     if(sqlite3_open(databasePathUTF8, &database) == SQLITE_OK)
     {
@@ -97,9 +93,8 @@
     sqlite3_close(database);
     return result;
 }
-      
-      
-            
+                
+        
 [QUERY_METHODS]
 
 @end

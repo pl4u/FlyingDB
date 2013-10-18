@@ -1,0 +1,7 @@
+
++ (int) update[TABLE_NAME_CAPITAL][PARAMS] withFieldName: (NSString *) fieldName withFieldValue: (NSString *) fieldValue
+{ 
+    NSString* query = [NSString stringWithFormat: 
+                       @"UPDATE [TABLE_NAME] SET [TABLE_FIELDS] WHERE %@='%@'", [VALUES], fieldName, fieldValue];
+    return [self updateDeleteToDatabase: query];  
+}
