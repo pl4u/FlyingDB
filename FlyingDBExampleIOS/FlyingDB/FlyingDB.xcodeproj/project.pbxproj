@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C28DB1E17B844C600AB1120 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C28DB1D17B844C600AB1120 /* UIKit.framework */; };
+		1C28DB2017B844C600AB1120 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C28DB1F17B844C600AB1120 /* Foundation.framework */; };
+		1C28DB2217B844C600AB1120 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C28DB2117B844C600AB1120 /* CoreGraphics.framework */; };
+		1C28DB2817B844C600AB1120 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C28DB2617B844C600AB1120 /* InfoPlist.strings */; };
+		1C28DB2A17B844C600AB1120 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C28DB2917B844C600AB1120 /* main.m */; };
+		1C28DB2E17B844C600AB1120 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C28DB2D17B844C600AB1120 /* AppDelegate.m */; };
+		1C28DB3017B844C600AB1120 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C28DB2F17B844C600AB1120 /* Default.png */; };
+		1C28DB3217B844C600AB1120 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C28DB3117B844C600AB1120 /* Default@2x.png */; };
+		1C28DB3417B844C600AB1120 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C28DB3317B844C600AB1120 /* Default-568h@2x.png */; };
+		1C28DB3717B844C600AB1120 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C28DB3517B844C600AB1120 /* MainStoryboard.storyboard */; };
+		1C28DB3A17B844C600AB1120 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C28DB3917B844C600AB1120 /* ViewController.m */; };
+		1C28DB4217B844C600AB1120 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C28DB4117B844C600AB1120 /* SenTestingKit.framework */; };
+		1C28DB4317B844C600AB1120 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C28DB1D17B844C600AB1120 /* UIKit.framework */; };
+		1C28DB4417B844C600AB1120 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C28DB1F17B844C600AB1120 /* Foundation.framework */; };
+		1C28DB4C17B844C600AB1120 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C28DB4A17B844C600AB1120 /* InfoPlist.strings */; };
+		1C28DB4F17B844C600AB1120 /* FlyingDBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C28DB4E17B844C600AB1120 /* FlyingDBTests.m */; };
+		1CC99C6A17D55CED00F5E83B /* DatabaseAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC99C6317D55CED00F5E83B /* DatabaseAdapter.m */; };
+		1CC99C6B17D55CED00F5E83B /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC99C6517D55CED00F5E83B /* Event.m */; };
+		1CC99C6C17D55CED00F5E83B /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC99C6717D55CED00F5E83B /* Location.m */; };
+		1CC99C6D17D55CED00F5E83B /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC99C6917D55CED00F5E83B /* Person.m */; };
+		1CD4A6F0181192AE00A9A6F0 /* test.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 1CD4A6EF181192AE00A9A6F0 /* test.sqlite */; };
+		1CD4A6F2181193FD00A9A6F0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD4A6F1181193FD00A9A6F0 /* libsqlite3.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1C28DB4517B844C600AB1120 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C28DB1217B844C600AB1120 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C28DB1917B844C600AB1120;
+			remoteInfo = FlyingDB;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1C28DB1A17B844C600AB1120 /* FlyingDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyingDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C28DB1D17B844C600AB1120 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1C28DB1F17B844C600AB1120 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1C28DB2117B844C600AB1120 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1C28DB2517B844C600AB1120 /* FlyingDB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlyingDB-Info.plist"; sourceTree = "<group>"; };
+		1C28DB2717B844C600AB1120 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1C28DB2917B844C600AB1120 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1C28DB2B17B844C600AB1120 /* FlyingDB-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlyingDB-Prefix.pch"; sourceTree = "<group>"; };
+		1C28DB2C17B844C600AB1120 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1C28DB2D17B844C600AB1120 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1C28DB2F17B844C600AB1120 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1C28DB3117B844C600AB1120 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		1C28DB3317B844C600AB1120 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1C28DB3617B844C600AB1120 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		1C28DB3817B844C600AB1120 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1C28DB3917B844C600AB1120 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1C28DB4017B844C600AB1120 /* FlyingDBTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlyingDBTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C28DB4117B844C600AB1120 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		1C28DB4917B844C600AB1120 /* FlyingDBTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlyingDBTests-Info.plist"; sourceTree = "<group>"; };
+		1C28DB4B17B844C600AB1120 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1C28DB4D17B844C600AB1120 /* FlyingDBTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlyingDBTests.h; sourceTree = "<group>"; };
+		1C28DB4E17B844C600AB1120 /* FlyingDBTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlyingDBTests.m; sourceTree = "<group>"; };
+		1CC99C6217D55CED00F5E83B /* DatabaseAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseAdapter.h; sourceTree = "<group>"; };
+		1CC99C6317D55CED00F5E83B /* DatabaseAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseAdapter.m; sourceTree = "<group>"; };
+		1CC99C6417D55CED00F5E83B /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		1CC99C6517D55CED00F5E83B /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		1CC99C6617D55CED00F5E83B /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		1CC99C6717D55CED00F5E83B /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		1CC99C6817D55CED00F5E83B /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		1CC99C6917D55CED00F5E83B /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		1CD4A6EF181192AE00A9A6F0 /* test.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.sqlite; sourceTree = "<group>"; };
+		1CD4A6F1181193FD00A9A6F0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C28DB1717B844C600AB1120 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CD4A6F2181193FD00A9A6F0 /* libsqlite3.dylib in Frameworks */,
+				1C28DB1E17B844C600AB1120 /* UIKit.framework in Frameworks */,
+				1C28DB2017B844C600AB1120 /* Foundation.framework in Frameworks */,
+				1C28DB2217B844C600AB1120 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C28DB3C17B844C600AB1120 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C28DB4217B844C600AB1120 /* SenTestingKit.framework in Frameworks */,
+				1C28DB4317B844C600AB1120 /* UIKit.framework in Frameworks */,
+				1C28DB4417B844C600AB1120 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C28DB1117B844C600AB1120 = {
+			isa = PBXGroup;
+			children = (
+				1C28DB2317B844C600AB1120 /* FlyingDB */,
+				1C28DB4717B844C600AB1120 /* FlyingDBTests */,
+				1C28DB1C17B844C600AB1120 /* Frameworks */,
+				1C28DB1B17B844C600AB1120 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1C28DB1B17B844C600AB1120 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1C28DB1A17B844C600AB1120 /* FlyingDB.app */,
+				1C28DB4017B844C600AB1120 /* FlyingDBTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1C28DB1C17B844C600AB1120 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CD4A6F1181193FD00A9A6F0 /* libsqlite3.dylib */,
+				1C28DB1D17B844C600AB1120 /* UIKit.framework */,
+				1C28DB1F17B844C600AB1120 /* Foundation.framework */,
+				1C28DB2117B844C600AB1120 /* CoreGraphics.framework */,
+				1C28DB4117B844C600AB1120 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1C28DB2317B844C600AB1120 /* FlyingDB */ = {
+			isa = PBXGroup;
+			children = (
+				1CC99C6117D55CED00F5E83B /* Database */,
+				1C28DB2C17B844C600AB1120 /* AppDelegate.h */,
+				1C28DB2D17B844C600AB1120 /* AppDelegate.m */,
+				1C28DB3517B844C600AB1120 /* MainStoryboard.storyboard */,
+				1C28DB3817B844C600AB1120 /* ViewController.h */,
+				1C28DB3917B844C600AB1120 /* ViewController.m */,
+				1C28DB2417B844C600AB1120 /* Supporting Files */,
+			);
+			path = FlyingDB;
+			sourceTree = "<group>";
+		};
+		1C28DB2417B844C600AB1120 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C28DB2517B844C600AB1120 /* FlyingDB-Info.plist */,
+				1C28DB2617B844C600AB1120 /* InfoPlist.strings */,
+				1C28DB2917B844C600AB1120 /* main.m */,
+				1C28DB2B17B844C600AB1120 /* FlyingDB-Prefix.pch */,
+				1C28DB2F17B844C600AB1120 /* Default.png */,
+				1C28DB3117B844C600AB1120 /* Default@2x.png */,
+				1C28DB3317B844C600AB1120 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1C28DB4717B844C600AB1120 /* FlyingDBTests */ = {
+			isa = PBXGroup;
+			children = (
+				1C28DB4D17B844C600AB1120 /* FlyingDBTests.h */,
+				1C28DB4E17B844C600AB1120 /* FlyingDBTests.m */,
+				1C28DB4817B844C600AB1120 /* Supporting Files */,
+			);
+			path = FlyingDBTests;
+			sourceTree = "<group>";
+		};
+		1C28DB4817B844C600AB1120 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C28DB4917B844C600AB1120 /* FlyingDBTests-Info.plist */,
+				1C28DB4A17B844C600AB1120 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1CC99C6117D55CED00F5E83B /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				1CD4A6EF181192AE00A9A6F0 /* test.sqlite */,
+				1CC99C6217D55CED00F5E83B /* DatabaseAdapter.h */,
+				1CC99C6317D55CED00F5E83B /* DatabaseAdapter.m */,
+				1CC99C6417D55CED00F5E83B /* Event.h */,
+				1CC99C6517D55CED00F5E83B /* Event.m */,
+				1CC99C6617D55CED00F5E83B /* Location.h */,
+				1CC99C6717D55CED00F5E83B /* Location.m */,
+				1CC99C6817D55CED00F5E83B /* Person.h */,
+				1CC99C6917D55CED00F5E83B /* Person.m */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1C28DB1917B844C600AB1120 /* FlyingDB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C28DB5217B844C600AB1120 /* Build configuration list for PBXNativeTarget "FlyingDB" */;
+			buildPhases = (
+				1C28DB1617B844C600AB1120 /* Sources */,
+				1C28DB1717B844C600AB1120 /* Frameworks */,
+				1C28DB1817B844C600AB1120 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlyingDB;
+			productName = FlyingDB;
+			productReference = 1C28DB1A17B844C600AB1120 /* FlyingDB.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1C28DB3F17B844C600AB1120 /* FlyingDBTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C28DB5517B844C600AB1120 /* Build configuration list for PBXNativeTarget "FlyingDBTests" */;
+			buildPhases = (
+				1C28DB3B17B844C600AB1120 /* Sources */,
+				1C28DB3C17B844C600AB1120 /* Frameworks */,
+				1C28DB3D17B844C600AB1120 /* Resources */,
+				1C28DB3E17B844C600AB1120 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C28DB4617B844C600AB1120 /* PBXTargetDependency */,
+			);
+			name = FlyingDBTests;
+			productName = FlyingDBTests;
+			productReference = 1C28DB4017B844C600AB1120 /* FlyingDBTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1C28DB1217B844C600AB1120 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Paul Lee";
+			};
+			buildConfigurationList = 1C28DB1517B844C600AB1120 /* Build configuration list for PBXProject "FlyingDB" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1C28DB1117B844C600AB1120;
+			productRefGroup = 1C28DB1B17B844C600AB1120 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1C28DB1917B844C600AB1120 /* FlyingDB */,
+				1C28DB3F17B844C600AB1120 /* FlyingDBTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1C28DB1817B844C600AB1120 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C28DB2817B844C600AB1120 /* InfoPlist.strings in Resources */,
+				1CD4A6F0181192AE00A9A6F0 /* test.sqlite in Resources */,
+				1C28DB3017B844C600AB1120 /* Default.png in Resources */,
+				1C28DB3217B844C600AB1120 /* Default@2x.png in Resources */,
+				1C28DB3417B844C600AB1120 /* Default-568h@2x.png in Resources */,
+				1C28DB3717B844C600AB1120 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C28DB3D17B844C600AB1120 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C28DB4C17B844C600AB1120 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C28DB3E17B844C600AB1120 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C28DB1617B844C600AB1120 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C28DB2A17B844C600AB1120 /* main.m in Sources */,
+				1C28DB2E17B844C600AB1120 /* AppDelegate.m in Sources */,
+				1C28DB3A17B844C600AB1120 /* ViewController.m in Sources */,
+				1CC99C6A17D55CED00F5E83B /* DatabaseAdapter.m in Sources */,
+				1CC99C6B17D55CED00F5E83B /* Event.m in Sources */,
+				1CC99C6C17D55CED00F5E83B /* Location.m in Sources */,
+				1CC99C6D17D55CED00F5E83B /* Person.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C28DB3B17B844C600AB1120 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C28DB4F17B844C600AB1120 /* FlyingDBTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1C28DB4617B844C600AB1120 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C28DB1917B844C600AB1120 /* FlyingDB */;
+			targetProxy = 1C28DB4517B844C600AB1120 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1C28DB2617B844C600AB1120 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C28DB2717B844C600AB1120 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1C28DB3517B844C600AB1120 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C28DB3617B844C600AB1120 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		1C28DB4A17B844C600AB1120 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C28DB4B17B844C600AB1120 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1C28DB5017B844C600AB1120 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1C28DB5117B844C600AB1120 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1C28DB5317B844C600AB1120 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlyingDB/FlyingDB-Prefix.pch";
+				INFOPLIST_FILE = "FlyingDB/FlyingDB-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1C28DB5417B844C600AB1120 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlyingDB/FlyingDB-Prefix.pch";
+				INFOPLIST_FILE = "FlyingDB/FlyingDB-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1C28DB5617B844C600AB1120 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FlyingDB.app/FlyingDB";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlyingDB/FlyingDB-Prefix.pch";
+				INFOPLIST_FILE = "FlyingDBTests/FlyingDBTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		1C28DB5717B844C600AB1120 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FlyingDB.app/FlyingDB";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FlyingDB/FlyingDB-Prefix.pch";
+				INFOPLIST_FILE = "FlyingDBTests/FlyingDBTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C28DB1517B844C600AB1120 /* Build configuration list for PBXProject "FlyingDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C28DB5017B844C600AB1120 /* Debug */,
+				1C28DB5117B844C600AB1120 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C28DB5217B844C600AB1120 /* Build configuration list for PBXNativeTarget "FlyingDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C28DB5317B844C600AB1120 /* Debug */,
+				1C28DB5417B844C600AB1120 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C28DB5517B844C600AB1120 /* Build configuration list for PBXNativeTarget "FlyingDBTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C28DB5617B844C600AB1120 /* Debug */,
+				1C28DB5717B844C600AB1120 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1C28DB1217B844C600AB1120 /* Project object */;
+}

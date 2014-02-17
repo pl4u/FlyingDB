@@ -1,0 +1,104 @@
+//
+// This is a sample DatabaseAdapter class.
+// No updates required.
+//
+
+#import <sqlite3.h>
+#import "DatabaseAdapter.h"
+[IMPORTS]
+
+@implementation DatabaseAdapter
+
++ (NSString *) databasePath
+{
+    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    
+    return [documentsPath stringByAppendingPathComponent:@"[DATABASE_FILE_NAME]"];
+}
+
++ (BOOL) databaseExists
+{
+    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *databaseFilePath = [documentsPath stringByAppendingPathComponent:@"[DATABASE_FILE_NAME]"];
+    return [[NSFileManager defaultManager] fileExistsAtPath:databaseFilePath];
+}
+
++ (void) copyOverDatabase
+{
+    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    
+    NSString *databaseDestinationPath = [documentsPath stringByAppendingPathComponent:@"[DATABASE_FILE_NAME]"];
+    NSString *databaseSourcePath = [[NSBundle mainBundle] pathForResource:@"[DATABASE_FILE_NAME_MINUS_EXTENSION]" ofType:@"sqlite"];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error = nil;
+    
+    if([fileManager fileExistsAtPath:databaseDestinationPath]==YES)
+    {
+        [fileManager removeItemAtPath:databaseDestinationPath error:&error];
+        if(error)
+            NSLog(@"ERROR: %@\n%@\n",[error userInfo], [error localizedFailureReason]);
+    }
+    
+    [fileManager createDirectoryAtPath:documentsPath withIntermediateDirectories:YES attributes:nil error:&error];
+    
+    if(error)
+        NSLog(@"ERROR: %@\n%@\n", [error userInfo], [error localizedFailureReason]);
+    
+    [fileManager copyItemAtPath:databaseSourcePath toPath:databaseDestinationPath error:&error];
+    
+    if(error)
+        NSLog(@"ERROR: %@\n%@\n", [error userInfo], [error localizedFailureReason]);
+    
+}
+
+// Utility Methods
++ (NSString *) insertToDatabase: (NSString *) queryString
+{
+    NSString *filePath = [self databasePath];
+    sqlite3 *database;
+    const char *databasePathUTF8 = [filePath UTF8String];
+    char *errorMessage;
+    int result=0; 
+    NSString *primaryKeyInserted=nil;
+    if(sqlite3_open(databasePathUTF8, &database) == SQLITE_OK)
+    {
+        result = sqlite3_exec(database, [queryString UTF8String], NULL, NULL, &errorMessage);
+        
+        if(result!=SQLITE_OK)
+        {
+            NSLog(@"%s, Query: %@\n\n", errorMessage, queryString);
+        }
+        else
+        {
+            primaryKeyInserted = [NSString stringWithFormat:@"%lld", sqlite3_last_insert_rowid(database)];
+        }
+    }
+    sqlite3_close(database);
+    return primaryKeyInserted;
+}
+
++ (int) updateDeleteToDatabase: (NSString *) queryString
+{
+    NSString *filePath = [self databasePath];
+    sqlite3 *database;
+    const char *databasePathUTF8 = [filePath UTF8String];
+    char *errorMessage;
+    int result=0; 
+    if(sqlite3_open(databasePathUTF8, &database) == SQLITE_OK)
+    {
+        result = sqlite3_exec(database, [queryString UTF8String], NULL, NULL, &errorMessage);
+            
+        if(result!=SQLITE_OK)
+        {
+            NSLog(@"%s, Query: %@", errorMessage, queryString);
+        }
+    }
+    sqlite3_close(database);
+    return result;
+}
+                
+        
+[QUERY_METHODS]
+
+@end

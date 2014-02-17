@@ -1,0 +1,7 @@
+
++ (NSString *) add[TABLE_NAME_CAPITAL][PARAMS]
+{ 
+    NSString* query = [NSString stringWithFormat: 
+                       @"INSERT INTO [TABLE_NAME] ([TABLE_FIELDS]) VALUES ([@LIST])", [VALUES]];
+    return [self insertToDatabase: query];  
+}

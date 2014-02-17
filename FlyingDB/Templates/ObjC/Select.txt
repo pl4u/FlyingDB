@@ -1,0 +1,42 @@
+
++ (NSMutableArray *) get[TABLE_NAME_CAPITAL]ListWithFieldName: (NSString*) fieldName withFieldValue: (NSString*) fieldValue withOrderBy: (NSString*) orderBy
+{
+    NSString *filePath = [self databasePath];
+    
+    NSMutableArray *pojoList = [[NSMutableArray alloc] init];
+    
+    sqlite3 *database;
+    const char* databasePathUTF8 = [filePath UTF8String];
+    if(sqlite3_open(databasePathUTF8, &database) == SQLITE_OK)
+    {
+        NSMutableString *query = [NSMutableString stringWithFormat:@"[SELECT_QUERY] FROM [TABLE_NAME]"];
+        if(fieldName!=nil && fieldValue!=nil) 
+        {
+        	[query appendFormat: @" WHERE %@ = '%@'", fieldName, fieldValue];
+        }
+        
+        if(orderBy!=nil)
+        {
+       		[query appendFormat: @" ORDER BY %@", orderBy];
+        }
+
+        
+        sqlite3_stmt * statement;
+        int result = sqlite3_prepare_v2(database, [query UTF8String], -1, &statement, nil);
+        if(result!=SQLITE_OK)
+        {
+            NSLog(@"Error with Query: %@", query);
+        }
+        while(sqlite3_step(statement) == SQLITE_ROW)
+        {
+        
+            [POJO] *newPojo = [NEW_POJO];  
+            [pojoList addObject:newPojo];
+            
+        }
+        sqlite3_finalize(statement);
+    }
+    sqlite3_close(database);
+    return pojoList;
+    
+}

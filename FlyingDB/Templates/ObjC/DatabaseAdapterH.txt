@@ -1,0 +1,26 @@
+//
+// This is a sample DatabaseAdapter class.
+// No updates required here.
+//
+
+
+#import <Foundation/Foundation.h>
+[IMPORTS]
+
+
+
+@interface DatabaseAdapter : NSObject
+{
+}
+
+
+
++ (int) updateDeleteToDatabase: (NSString *) queryString;
++ (NSString *) insertToDatabase: (NSString *) queryString;
++ (BOOL) databaseExists;
++ (void) copyOverDatabase;
++ (NSString *) databasePath;
+
+[QUERY_METHODS]
+
+@end

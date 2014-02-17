@@ -1,6 +1,5 @@
 
 	public int remove[TABLE_NAME_CAPITAL](String fieldName, String fieldValue) {
-		SQLiteDatabase database = databaseHelper.getWritableDatabase();
 		int result = database.delete("[TABLE_NAME]", fieldName + " = ?",
 				new String[] { fieldValue });
 		return result;

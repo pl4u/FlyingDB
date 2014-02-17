@@ -1,6 +1,5 @@
 
 	public List<[POJO]> get[TABLE_NAME_CAPITAL]List(String fieldName, String fieldValue, String orderBy) 	{
-		SQLiteDatabase database = databaseHelper.getWritableDatabase();
 		Cursor result = null;
 		String query = "[SELECT_QUERY] FROM [TABLE_NAME]";
 		if(fieldName!=null && fieldName.length()>0) {

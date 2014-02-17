@@ -1,0 +1,7 @@
+
++ (int) remove[TABLE_NAME_CAPITAL]WithFieldName: (NSString *) fieldName withFieldValue: (NSString *) fieldValue
+{
+    NSString* query = [NSString stringWithFormat: 
+                       @"DELETE FROM [TABLE_NAME] WHERE %@='%@'", fieldName, fieldValue];
+    return [self updateDeleteToDatabase: query];
+}
