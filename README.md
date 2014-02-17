@@ -40,19 +40,19 @@ The python script generates Android Java code in the generated\android directory
 An example of using the generated code can be found in the accompanying FlyingDBExample Eclipse project. To add to an existing project, create a new package called com.flyingboba.flyingdb and copy your files into it.
 
 
-DatabaseAdapter.java
+<h3>DatabaseAdapter.java</h3>
 
 This file contains all the query methods for interacting with the database and utilizes the DatabaseHelper class.
 
 
-DatabaseHelper.java
+<h3>DatabaseHelper.java</h3>
 
 This file establishes a connection to the database and contains methods for copying an existing database over to phone storage.
 
 
 If you do not want to copy an existing database over and want to generate the database in code, you can make the following modifications:
 
-To generate your database by code, do it in the onCreate method of DatabaseHelper. Remove the methods related to copying the database over which include copyDatabase, checkDatabase, and createDatabase. Also, remove the call to createDatabase in the DatabaseAdapter open method.
+To generate your database by code, do it in the onCreate method of DatabaseHelper. Remove the methods related to copying the database over which include copyDatabase, checkDatabase, and createDatabase. 
 
 
 
