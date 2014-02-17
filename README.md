@@ -8,16 +8,15 @@ An Android/iOS SQLite code generator utility written in Python
 
 Introduction
 
-FlyingDB generates Plain Old Java Objects (POJOs) and simple query methods based on any SQLite database file. The files 
+FlyingDB generates simple object files and simple query methods based on any SQLite database file. The files 
 generated provide a preliminary set of classes and methods for interacting with a database. 
 Although the data query methods are simple CRUD operations, hopefully, this will provide a code base
 to build upon and save time in the long run.
  
-This software utility is still being developed and the goal will be to eventually also generate iOS code as well.
 Currently, this tool handles all data in the database as String values. This tool retrieves data from the database and converts 
-to a String type and also updates the database using a String type. Supporting non-String data types will be added in a future 
-release. Multiple data types may not be a huge issue due to SQLite's data type affinity feature if data is stored in the correct format 
-(for example, only integers being stored in integer columns even though it's sent as a string to the database).  
+to a String type and also updates the database using a String type. Multiple data types may not be a huge issue due to SQLite's 
+data type affinity feature if data is stored in the correct format (for example, only integers being stored in integer columns 
+even though it's sent as a string to the database).  
 
 FlyingDB is released under the MIT License. See the license file for details.
 
@@ -36,8 +35,9 @@ To run and generate code with a prefix in front of class names for POJOs, execut
 	python flyingdb.py sqliteDBFile prefix
 	
 	
-The python script generates Android Java code in the generated\android directory. The database helper classes are DatabaseAdapter.java and 
-DatabaseHelper.java.
+The python script generates Android Java code in the generated\android directory and IOS code in the generated\ios directory. 
+The Android database helper class files are DatabaseAdapter.java and DatabaseHelper.java. The IOS database adapter class files 
+are DatabaseAdapter.h and DatabaseAdapter.m.
 
 
 
@@ -68,5 +68,10 @@ which include copyDatabase, checkDatabase, and createDatabase. Also, remove the 
 
 Using the Generated Code for iOS
 
-Currently, the iOS dev branch only produces simple objective-c objects and the database helper classes are not created.
+See and try out the example IOS project for how you might use the generated code. The main code that calls the generated code can be found in
+ViewController.m. In ViewController.m, the code creates the database by calling on the DatabaseAdapter.copyOverDatabase() method which copies
+the database (assuming that you included the database in your project) to the App's document path. If you want to create the database in code,
+you can do so, but the database needs to be created in the App's document path for the other DatabaseAdapter query methods to work. 
 
+
+Thanks for checking this out and would appreciate any feedback!
