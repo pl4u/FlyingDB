@@ -1,6 +1,5 @@
 <h1>FlyingDB</h1>
-My first GitHub side project!!!
-
+This is a side project for me that I hope could be useful to other people.
 
 <h2>Description</h2>
 An Android/iOS SQLite code generator utility written in Python
