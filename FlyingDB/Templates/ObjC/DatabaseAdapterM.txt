@@ -1,3 +1,7 @@
+//
+// This is a sample DatabaseAdapter class.
+// No updates required.
+//
 
 #import <sqlite3.h>
 #import "DatabaseAdapter.h"

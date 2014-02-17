@@ -1,3 +1,11 @@
+// 
+// This is a sample DatabaseAdapter class.
+// If you plan on creating the database in code, do it in DatabaseHelper.onCreate(SqLiteDatabase db).
+// If you plan on copying over an existing database, you can use the sample
+// DatabaseHelper.createDatabase(), DatabaseHelper.checkDatabase(), and DatabaseHelper.copyDatabase() 
+// methods by uncommenting them and calling them in the DatabaseAdapter.open() method.
+//
+
 package com.flyingboba.flyingdb;
 
 import java.io.IOException;
@@ -23,7 +31,8 @@ public class DatabaseAdapter {
 	public void open() {
 		Log.i("DatabaseAdapter", "Opening database connection");
 		//
-		// If copying database over from .apk, do it here.
+		// <! You may need to do something here !>
+		// <! If copying database over from .apk, do it here. !>
 		//
 		database = databaseHelper.getWritableDatabase();		
 	}
