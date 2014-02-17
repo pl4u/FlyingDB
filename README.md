@@ -43,7 +43,7 @@ An example of using the generated code can be found in the accompanying FlyingDB
 
 To generate your database by code, do it in the onCreate method of DatabaseHelper. Remove the methods related to copying the database over which include copyDatabase, checkDatabase, and createDatabase. 
 
-<h5>If you want to copy an existing database over, you can do so in the DatabaseAdapter.open() method by uncommenting and using the DatabaseHelper copyDatabase, checkDatabase, and createDatabase methods as shown in the example code.</h5>
+<h5>If you want to copy an existing database over, you can do so in the DatabaseAdapter.open() method by uncommenting and using the DatabaseHelper copyDatabase, checkDatabase, and createDatabase methods as shown in the FlyingDBExample code.</h5>
 
 
 <b>DatabaseAdapter.java - </b> This file contains all the query methods for interacting with the database and utilizes the DatabaseHelper class.
