@@ -24,12 +24,12 @@ FlyingDB is written as a Python script. flyingdb.py must be run in its home dire
 	python flyingdb.py sqliteDBFile 
 
 
-To run and generate code with a prefix in front of class names for POJOs, execute:
+To run and generate code with a prefix in front of class names for the simple objects, execute:
 
 	python flyingdb.py sqliteDBFile prefix
 	
 	
-The python script generates Android Java code in the generated\android directory and IOS code in the generated\ios directory. The Android database helper class files are DatabaseAdapter.java and DatabaseHelper.java. The IOS database adapter class files are DatabaseAdapter.h and DatabaseAdapter.m.
+The python script generates Android Java code in the generated\android directory and iOS code in the generated\ios directory. The Android database helper class files are DatabaseAdapter.java and DatabaseHelper.java. The iOS database adapter class files are DatabaseAdapter.h and DatabaseAdapter.m.
 
 
 
@@ -62,4 +62,4 @@ To generate your database by code, do it in the onCreate method of DatabaseHelpe
 See and try out the example IOS project (FlyingDBExampleIOS) for how you might use the generated code. The main code that calls the generated code can be found in ViewController.m. In ViewController.m, the code creates the database by calling on the DatabaseAdapter.copyOverDatabase() method which copies the database (assuming that you included the database in your project) to the App's document path. If you want to create the database in code, you can do so, but the database needs to be created in the App's document path for the other DatabaseAdapter query methods to work. 
 
 
-<h2>Thanks for checking this out and would appreciate any feedback!</h2>
+<h2>Thanks for checking this out and I would appreciate any feedback!</h2>
