@@ -8,7 +8,7 @@ An Android/iOS SQLite code generator utility written in Python
 
 <h2>Introduction</h2>
 
-FlyingDB generates simple object files and simple query methods based on any SQLite database file. The files generated provide a preliminary set of classes and methods for interacting with a database. Although the data query methods are simple CRUD operations, hopefully, this will provide a code base to build upon and save time in the long run.
+FlyingDB generates simple object files and simple query methods based on any SQLite database file. The files generated provide a preliminary set of classes and methods for interacting with a SQLite database. Although the data query methods are simple CRUD operations, hopefully, this will provide a code base to build upon and save time in the long run.
  
 Currently, this tool handles all data in the database as String values. This tool retrieves data from the database and converts to a String type and also updates the database using a String type. Multiple data types may not be a huge issue due to SQLite's data type affinity feature if data is stored in the correct format (for example, only integers being stored in integer columns even though it's sent as a string to the database).  
 
@@ -59,7 +59,7 @@ To generate your database by code, do it in the onCreate method of DatabaseHelpe
 
 <h2>Using the Generated Code for iOS</h2>
 
-See and try out the example IOS project (FlyingDBExampleIOS) for how you might use the generated code. The main code that calls the generated code can be found in ViewController.m. In ViewController.m, the code creates the database by calling on the DatabaseAdapter.copyOverDatabase() method which copies the database (assuming that you included the database in your project) to the App's document path. If you want to create the database in code, you can do so, but the database needs to be created in the App's document path for the other DatabaseAdapter query methods to work. 
+See and try out the example iOS project (FlyingDBExampleIOS) for how you might use the generated code. The main code that calls the generated code can be found in ViewController.m. In ViewController.m, the code creates the database by calling on the DatabaseAdapter.copyOverDatabase() method which copies the database (assuming that you included the database in your project) to the App's document path. If you want to create the database in code, you can do so, but the database needs to be created in the App's document path for the other DatabaseAdapter query methods to work. 
 
 
 <h2>Thanks for checking this out and I would appreciate any feedback!</h2>
